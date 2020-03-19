@@ -2,6 +2,8 @@
 using namespace std;
 
 
+
+
 int maxProfit(int arr[],int n){
 	if(n==0)return 0;
 
@@ -9,7 +11,7 @@ int maxProfit(int arr[],int n){
 	for(int i=1;i<=n;i++){
 		int resultProfit=arr[i]+maxProfit(arr,n-i);
 		best=max(resultProfit,best);
-		cout<<" best is "<<best<<endl;
+		
 	}
 
 	return best;

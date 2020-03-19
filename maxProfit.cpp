@@ -1,10 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
+int memo[10000];//using memoization for reducing time complexity
 
 
 int profit(int a[],int be,int end,int year){
+	
 	if(be>end){
-      return 0;
+		return 0;
 	}
 
 	int q1=a[be]*year+profit(a,be+1,end,year+1);
@@ -16,6 +18,7 @@ int profit(int a[],int be,int end,int year){
 int main(){
 	int n,a[1000];
 	cin>>n;
+	
 
 	for(int i=0;i<n;i++){
 		cin>>a[i];
